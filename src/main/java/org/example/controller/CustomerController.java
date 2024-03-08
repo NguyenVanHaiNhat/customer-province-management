@@ -63,7 +63,7 @@ public class CustomerController {
         }
     }
 
-    @PostMapping("/update/{id}")
+    @PostMapping("/update/{id}" )
     public String update(@ModelAttribute("customer") Customer customer, RedirectAttributes redirectAttributes){
         customerService.save(customer);
         redirectAttributes.addFlashAttribute("success", "update customer successfully");
